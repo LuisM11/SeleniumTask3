@@ -37,7 +37,6 @@ public class GCPPricingCalculatorTest {
 
     @Test
     public void verifyEstimatedCostViaEmailAndPage() {
-        WebDriver driver = WebDriverFactory.createDriver("chrome");
         HomePage homePage = new HomePage(driver);
 
         //Completing form with specified parameters

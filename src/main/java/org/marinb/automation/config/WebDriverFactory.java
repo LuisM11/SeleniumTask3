@@ -20,12 +20,7 @@ public class WebDriverFactory {
                 return new ChromeDriver(chromeOptions);
 //                return  new ChromeDriver();
             case "firefox":
-                FirefoxProfile firefoxProfile = new FirefoxProfile();
-                firefoxProfile.addExtension(new File("src/test/resources/adblockultimate@adblockultimate.net.xpi"));
-                FirefoxOptions firefoxOptions = new FirefoxOptions();
-                firefoxOptions.setProfile(firefoxProfile);
-                return new FirefoxDriver(firefoxOptions);
-//                return new FirefoxDriver();
+                return new FirefoxDriver();
             case "edge":
                 return new EdgeDriver();
             default:
