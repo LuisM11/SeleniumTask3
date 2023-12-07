@@ -5,7 +5,7 @@
 
 
 > [!CAUTION]
-> Some errors or bugs are appear when executing the project.
+> Some errors or bugs appear when executing the project.
 > *  An exception is always thrown at the end of the program  with Firefox (it doesn't interfer with the script or test)
 >   ```
 >   Dec 07, 2023 1:05:28 AM org.openqa.selenium.os.ExternalProcess$Builder lambda$start$0
