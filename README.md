@@ -20,6 +20,6 @@
 
 
 > [!NOTE]
-> To switch between browsers, change 'browser' attribute in context.properties file
-> It is possible to run without adblockers by commenting out the browser configuration code lines in WebDriversFactory
+> * To switch between browsers, change 'browser' attribute in context.properties file
+> * It is possible to run this without adblockers by commenting out the browser configuration code lines in WebDriversFactory
 
