@@ -7,7 +7,8 @@ import org.marinb.automation.pages.HomePage;
 import org.marinb.automation.pages.YopMailPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -78,11 +79,11 @@ public class GCPPricingCalculatorTest {
 
     }
 
-    @AfterClass
-    public void tearDown () {
+    @AfterTest
+    public void after () {
         driver.close();
         driver.quit();
-        logger.debug("Driver was closed");
+        logger.info("Driver was closed");
     }
 
 

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -15,9 +16,10 @@ import java.util.List;
 
 public class test {
     public static void main(String[] args) {
-        WebDriver driver = WebDriverFactory.createDriver("firefox");
+        WebDriver driver = WebDriverFactory.createDriver("chrome");
         HomePage homePage = new HomePage(driver);
-        CalculatorFormPage calculatorFormPage = homePage.openPage().search("Google Cloud Platform Pricing Calculator")
+        CalculatorFormPage calculatorFormPage = homePage.openPage()
+                .search("Google Cloud Platform Pricing Calculator")
                 .openCalculatorPage()
                 .switchToFormIframe()
                 .fillNumberOfInstances(4)
@@ -45,7 +47,8 @@ public class test {
         String estimatedCostInEmail = ((YopMailPage) yopMailPage.switchTab())
                 .checkInbox()
                 .getEstimatedCost();
-        System.out.println(estimatedCostInEmail.split(" ")[4]);
+
+        Assert.assertEquals(estimatedCostInPage.split(" ")[4], estimatedCostInEmail.split(" ")[4]);
 
         driver.close();
         driver.quit();
